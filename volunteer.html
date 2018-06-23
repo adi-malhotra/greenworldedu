@@ -1,0 +1,736 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Registration Form</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800|Sacramento" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+
+    <link rel="stylesheet" href="fonts/ionicons/css/ionicons.min.css">
+    <link rel="stylesheet" href="fonts/fontawesome/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="css/datepicker.css">
+    <!-- Theme Style -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+      label{
+        font-size: 1.1em;
+      }
+    </style>
+  </head>
+  <body>
+
+    <header role="banner">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+          <a class="navbar-brand header-text" href="index.html">GreenWorld Education</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarsExample05">
+            <ul class="navbar-nav ml-auto pl-lg-5 pl-0">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="sponsor.html">Sponsor</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="media.html">Media</a>
+              </li>
+              <li class="nav-item volunteer-btn">
+                <a href = "volunteer.html"role="button" class="btn btn-outline-warning btn-sm active">Volunteer with us! </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- END header -->
+
+    <!-- START Main content-->
+    <div class="container register-content">
+      <p style="margin-bottom:50px;">Welcome to ‘Teach Delhi’ platform and thank you for your interest in helping to teach the children, who need help the most. Please register yourself and let us know you better in order to provide you the opportunity most convenient and suitable to you. </p>
+      <p style="font-size:2em">Registration Form</p>
+      <div class="form-group">
+        <label class="control-label" for="initial-filter">Are you interested in working as:</label>
+        <select class="form-control custom-select" name="initial-filter" id="filter">
+          <option>Select one role</option>
+          <option value = "Teacher">Teacher</option>
+          <option value = "Volunteer">Volunteer</option>
+          <option value = "Intern">Intern</option>
+        </select>
+      </div>
+      <form id="volunteer-form" style="display:none" method="get" >
+        <div id="filter-volunteer" class="filter-content">Volunteer (you may or may not be enrolled in any educational institute or may or may not be currently working (e.g. retired) and some time to spare during some particular times of the year/month/day when you to volunteer for a meaningful cause)</div>
+          <div class="form-group">
+            <label class="control-label" for="name">Enter full name:</label>
+            <input type="text" name="name" class="form-control">
+          </div>
+          <div class="form-group row">
+            <div class="col-md-4 col-sm-12">
+              <label for="dob" class="control-label">Date of Birth</label>
+              <input id="dob-picker" type="text" name="dob" class="form-control dob calendar" disabled="false">
+            </div>
+            <div class="col-md-2 col-sm-12 dob" style="text-align:center">
+              or
+            </div>
+            <div class="col-md-6 col-sm-12">
+              <label for="age" class="control-label">Age in years if DOB not known</label>
+              <input id="age" type="text" name="age" class="form-control dob" disabled="false">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label" for="sex">Sex</label>
+            <select class="form-control custom-select" name="sex">
+              <option>Select one</option>
+              <option value = "male">Male</option>
+              <option value = "female">Female</option>
+              <option value = "others">Others</option>
+            </select>
+          </div>
+          <div id = "details-group" class="panel-group"> <!-- Configure this! -->
+            <div class="panel panel-default" style="margin-bottom: 3px">
+              <div class="panel-heading" style="border: 2px solid #bc5148; padding: 0 10px 0; border-radius: 3px">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" href="#contact-details" data-parent="#details-group">Contact Details</a>
+                </h4>
+              </div>
+              <div id = "contact-details" class="panel-collapse collapse">
+                <div class="form-group">
+                  <label for="mobile">Mobile Number</label>
+                  <input type="number" class="form-control" name="mobile">
+                </div>
+                <div class="form-group">
+                  <label for="whatsapp">WhatsApp Number (provide this only if you want us to contact you there)</label>
+                  <input type="number" class="form-control" name="whatsapp">
+                </div>
+                <div class="form-group">
+                  <label for="email">E-mail address</label>
+                  <input type="email" class="form-control" name="email" placeholder="name@example.com">
+                </div>
+                <div class="form-group">
+                  <label for="address">Current Address</label>
+                  <textarea class="form-control"type="number" rows="3"name="address"></textarea>
+                </div>
+                <div class="form-group">
+                  <label class="control-label" for="call-time">Best time to call you (if you are not contactable by email)</label>
+                  <select class="form-control custom-select" name="call-time">
+                    <option>Select one</option>
+                    <option value = "morning">9 - 12 AM</option>
+                    <option value = "noon">12 - 2 PM</option>
+                    <option value = "afternoon">2 - 4 PM</option>
+                    <option value = "evening">4 - 6 PM</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default" style="margin-bottom: 3px">
+              <div class="panel-heading" style="border: 2px solid #bc5148; padding: 0 10px 0; border-radius: 3px">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" href="#educational-details" data-parent="#details-group">Educational and Work Details</a>
+                </h4>
+              </div>
+              <div class="panel-collapse collapse" id="educational-details">
+                <div class="form-group">
+                  <label for="highest-completed">Highest completed educational qualification</label>
+                  <select class="form-control custom-select" name="highest-completed">
+                    <option>Select one</option>
+                    <option value = "high-school">Completed high school (class 12)</option>
+                    <option value = "university">Completed university degree ( BA/Bsc/Bcom , etc.)</option>
+                    <option value = "bacherlors">Bachelors diploma (e.g. polytechnic, elementary school diploma, etc.</option>
+                    <option value = "post-graduate">Post-graduate (Msc, Mtech, Mcom, etc)</option>
+                    <option value = "doctorate">Ph.D.</option>
+                    <option value = "post-graduate-diploma">Post Graudate Diploma</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label>Are you currently enrolled in any academic/educational institute</label>
+                  <fieldset id="enrolled">
+                    <div class="form-check">
+                      <input type="radio" name = "enrolled" id="yes" value="yes">
+                      <label class="form-check-label" for="yes">Yes</label>
+                    </div>
+                    <div class="form-check">
+                      <input type="radio" name = "enrolled" id="no" value="no">
+                      <label class="form-check-label" for="no">No</label>
+                    </div>
+                  </fieldset>
+                </div>
+                <div style="display:none;" class="form-group" id="current-enrolled">
+                  <label for = "current">What is current educational program enrolled in?</label>
+                  <select class="form-control custom-select" name="current">
+                    <option>Select one</option>
+                    <option value = "high-school">High school (class 10-12)</option>
+                    <option value = "Under-graduate">Under-graduation</option>
+                    <option value = "post-graduate">Post-graduation</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="occupation">Current occupation</label>
+                  <select class="form-control custom-select" name="occupation">
+                    <option>Select one</option>
+                    <option value="student">Student</option>
+                    <option value="homemaker">Homemaker</option>
+                    <option value="retired">Retired</option>
+                    <option value="freelance">Freelance consultant</option>
+                    <option value="teacher">Teacher/Professor</option>
+                    <option value="doctor">Doctor/Nurse</option>
+                    <option value="engineer">Engineer</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label>Have you ever taught before?</label>
+                  <fieldset id="taught">
+                    <div class="form-check">
+                      <input type="radio" name = "taught" id="yes" value="yes">
+                      <label class="form-check-label" for="yes">Yes</label>
+                    </div>
+                    <div class="form-check">
+                      <input type="radio" name = "taught" id="no" value="no">
+                      <label class="form-check-label" for="no">No</label>
+                    </div>
+                  </fieldset>
+                </div>
+                <div class="form-group" id="taught-before" style="display:none;">
+                  <label for="taught-before">For how long have you taught before?</label>
+                  <select class="form-control custom-select" name="taught-before">
+                    <option>Select one</option>
+                    <option value="less2">Less than 2 months</option>
+                    <option value="2to6">2 to 6 months</option>
+                    <option value="6to1">6 months to 1 year</option>
+                    <option value="1to2">1 to 2 years</option>
+                    <option value="more2">More than 2 years</option>
+                  </select>
+                </div>
+                <div class="form-group" style="display:none;" id="place-teach">
+                  <label for="teaching-place">Where did you teach earlier?</label>
+                  <input type="text" class="form-control"name="teaching-place">
+                </div>
+                <div class="form-group">
+                  <label>Which subjects are you most interested in teaching? (Select all those that apply)</label>
+                  <fieldset id="volunteer-interest-subjects">
+                    <div class="form-check">
+                      <input type="checkbox" name = "volunteer-interest-subjects" id="volunteer-hindi" value="hindi">
+                      <label class="form-check-label" for="volunteer-hindi">Hindi</label>
+                    </div>
+                    <div class="form-check">
+                      <input type="checkbox" name = "volunteer-interest-subjects" id="volunteer-english" value="english">
+                      <label class="form-check-label" for="volunteer-english">English</label>
+                    </div>
+                    <div class="form-check">
+                      <input type="checkbox" name = "volunteer-interest-subjects" id="volunteer-maths" value="maths">
+                      <label class="form-check-label" for="volunteer-maths">Mathematics</label>
+                    </div>
+                    <div class="form-check">
+                      <input type="checkbox" name = "volunteer-interest-subjects" id="volunteer-sports" value="sports">
+                      <label class="form-check-label" for="volunteer-sports">Sports</label>
+                    </div>
+                    <div class="form-check">
+                      <input type="checkbox" name = "volunteer-interest-subjects" id="arts" value="arts">
+                      <label class="form-check-label" for="volunteer-arts">Arts and Crafts</label>
+                    </div>
+                  </fieldset>
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default" style="margin-bottom: 10px">
+              <div class="panel-heading" style="border: 2px solid #bc5148; padding: 0 10px 0; border-radius: 3px">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" href="#interests-availability" data-parent="#details-group">Interests and Availability</a>
+                </h4>
+              </div>
+              <div class="panel-collapse collapse" id="interests-availability">
+                <div class="form-group">
+                  <label for="volunteer-work">What is the type of volunteer work you are interested in?</label>
+                  <div class="row">
+                    <div class="first-pref col-md-6 col-sm-12">
+                      <label for="first-pref">1st Preference</label>
+                      <select class="form-control custom-select" id="first-pref">
+                        <option>Select one</option>
+                        <option value="direct">Direct teaching of children</option>
+                        <option value="develop">Developing learning and training materials</option>
+                        <option value="primary">Primary research in education</option>
+                        <option value="comm">Communication and journalism</option>
+                      </select>
+                    </div>
+                    <div class="second-pref col-md-6 col-sm-12">
+                      <label class="control-label" for="second-pref">2nd Preference</label>
+                      <select class="form-control custom-select" id="second-pref">
+                        <option>Select one</option>
+                        <option value="direct">Direct teaching of children</option>
+                        <option value="develop">Developing learning and training materials</option>
+                        <option value="primary">Primary research in education</option>
+                        <option value="comm">Communication and journalism</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <label>Period of Availability</label>
+                <div class="form-group row" id="available-period">
+                  <div id = "period-1" class="container row">
+                    <div class="col-md-4 col-sm-12 from-div">
+                      <input type="text" name="from-1" class="form-control calendar from">
+                    </div>
+                    <div class="col-md-2 col-sm-12 to-text" style="text-align:center">to</div>
+                    <div class="col-md-4 col-sm-12 to-div">
+                      <input type="text" name="to-1" class="form-control calendar to">
+                    </div>
+                    <button type="button" name="add-period" class="btn btn-sm btn-primary col-md-1 add-period">Add</button>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label>Week Availability</label>
+                  <select class="form-control custom-select" name="week-availability">
+                    <option>Select one</option>
+                    <option value="m-f">Monday to Friday</option>
+                    <option value="m-s">Monday to Saturday</option>
+                    <option value="s-s">Only Saturday and Sunday</option>
+                    <option value="flexible">Flexible any 5 days a week</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label>Time Availability</label>
+                  <select class="form-control custom-select" name="time-availability">
+                    <option>Select one</option>
+                    <option value="morning">Only Morning shift(8 to 1 PM)</option>
+                    <option value="evening">Only Evening shift(2 PM to 6:30 PM)</option>
+                    <option value="m-e">Either Morning or Evening shift</option>
+                    <option value="day">9.30 to 6 PM Day shift only</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label>Preferred Geographical Areas</label>
+                  <div class="form-group">
+                    <select class="states form-control custom-select" name="volunteer-states" id="volunteer-states"></select>
+                  </div>
+                  <div class="form-group">
+                    <select class="cities form-control custom-select" name="volunteer-cities" id="volunteer-cities"></select>
+                  </div>
+                  <div class="form-group">
+                    <select class="schools form-control custom-select" name="volunteer-schools" id="volunteer-schools"></select>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label>Are you willing to consider honorary work?</label>
+                  <fieldset id = "honorary-volunteer">
+                    <div class="form-check">
+                      <input type="radio" name = "honorary" id="yes-honorary-volunteer" value="yes">
+                      <label class="form-check-label" for="yes-honorary-volunteer">Yes</label>
+                    </div>
+                    <div class="form-check">
+                      <input type="radio" name = "honorary" id="no-honorary-volunteer" value="no">
+                      <label class="form-check-label" for="no-honorary-volunteer">No</label>
+                    </div>
+                  </fieldset>
+                </div>
+                <div class="form-group">
+                  <label>Minimum expected remuneration (Monthly stipend/Travel Allowance)</label>
+                  <div class="row">
+                    <div class="col-md-1 text-center" style="font-size:1.4em">
+                       &#x20b9;
+                    </div>
+                    <div class="col-md-11">
+                      <input type="number" name="remuneration" class="form-control">
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label> How much farther are you willing to travel?</label>
+                  <select class="form-control custom-select" name="far-travel">
+                    <option>Select one</option>
+                    <option value="15">Only if the place is connected with public transport within 15 minutes</option>
+                    <option value="5">Within 5 KM</option>
+                    <option value="5-10">5 - 10 KM</option>
+                    <option value="10-15">10 - 15 KM</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label>Are you willing to teach children at your own home?</label>
+                  <fieldset id = "teach-home">
+                    <div class="form-check">
+                      <input type="radio" name = "teach-home" id="yes-teach" value="yes">
+                      <label class="form-check-label" for="yes-teach">Yes</label>
+                    </div>
+                    <div class="form-check">
+                      <input type="radio" name = "teach-home" id="no-teach" value="no">
+                      <label class="form-check-label" for="no-teach">No</label>
+                    </div>
+                    <div class="form-check">
+                      <input type="radio" name = "teach-home" id="yes-teach-details" value="no">
+                      <label class="form-check-label" for="yes-teach-details">Yes (need more details)</label>
+                    </div>
+                  </fieldset>
+                </div>
+              </div>
+            </div>
+          </div>
+        <input type="submit" value="Submit Form" class="submit_button btn btn-info btn-block" style="display:none; margin-bottom: 10px; cursor: pointer;">
+      </form>
+
+      <form id="intern-form" style="display:none" method="get">
+        <div id="filter-intern" class="filter-content"><p>An Intern (you are enrolled in an educational institute and work for 3 to 12 weeks on honorary but structured manner to get formal experience, a part of your college requirement/gain experience in social sector)</p></div>
+        <div class="form-group">
+          <label class="control-label" for="name">Enter full name:</label>
+          <input type="text" name="name" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="dob" class="control-label">Date of Birth</label>
+          <input id="dob-picker" type="text" name="dob" class="form-control dob calendar" disabled="false">
+        </div>
+        <div class="form-group">
+          <label class="control-label" for="sex">Sex</label>
+          <select class="form-control custom-select" name="sex">
+            <option>Select one</option>
+            <option value = "male">Male</option>
+            <option value = "female">Female</option>
+            <option value = "others">Others</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="mobile">Mobile Number</label>
+          <input type="number" class="form-control" name="mobile">
+        </div>
+        <div class="form-group">
+          <label for="whatsapp">WhatsApp Number (provide this only if you want us to contact you there)</label>
+          <input type="number" class="form-control" name="whatsapp">
+        </div>
+        <div class="form-group">
+          <label for="email">E-mail address</label>
+          <input type="email" class="form-control" name="email" placeholder="name@example.com">
+        </div>
+        <div class="form-group">
+          <label class="control-label" for="call-time">Best time to call you (if you are not contactable by email)</label>
+          <select class="form-control custom-select" name="call-time">
+            <option>Select one</option>
+            <option value = "morning">9 - 12 AM</option>
+            <option value = "noon">12 - 2 PM</option>
+            <option value = "afternoon">2 - 4 PM</option>
+            <option value = "evening">4 - 6 PM</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Current Educational Institute</label>
+          <input type="text" name="educational-institute" class="form-control">
+        </div>
+        <div class="form-group">
+          <label>Current educational program enrolled in: (Eg. BSc. 2nd year, or B.Tech third semester, etc.)</label>
+          <input type="text" name="educational-program" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="volunteer-work">What is the type of learning exposure you are interested in?</label>
+          <div class="row">
+            <div class="first-pref col-md-6 col-sm-12">
+              <label for="first-pref">1st Preference</label>
+              <select class="form-control custom-select" id="first-pref">
+                <option>Select one</option>
+                <option value="direct">Direct teaching of children</option>
+                <option value="develop">Developing learning and training materials</option>
+                <option value="primary">Primary research in education</option>
+                <option value="comm">Communication and journalism</option>
+              </select>
+            </div>
+            <div class="second-pref col-md-6 col-sm-12">
+              <label class="control-label" for="second-pref">2nd Preference</label>
+              <select class="form-control custom-select" id="second-pref">
+                <option>Select one</option>
+                <option value="direct">Direct teaching of children</option>
+                <option value="develop">Developing learning and training materials</option>
+                <option value="primary">Primary research in education</option>
+                <option value="comm">Communication and journalism</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <label>Period of Availability</label>
+        <div class="form-group row">
+          <div class="col-md-5 col-sm-12 from-div">
+            <input  type="text" name="from" class="form-control calendar from">
+          </div>
+          <div class="col-md-2 col-sm-12 to-text" style="text-align:center">to</div>
+          <div class="col-md-5 col-sm-12 to-div">
+            <input type="text" name="to" class="form-control calendar to">
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Week Availability</label>
+          <select class="form-control custom-select" name="week-availability">
+            <option>Select one</option>
+            <option value="m-f">Monday to Friday</option>
+            <option value="m-s">Monday to Saturday</option>
+            <option value="s-s">Only Saturday and Sunday</option>
+            <option value="flexible">Flexible any 5 days a week</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Time Availability</label>
+          <select class="form-control custom-select" name="time-availability">
+            <option>Select one</option>
+            <option value="morning">Only Morning shift(8 to 1 PM)</option>
+            <option value="evening">Only Evening shift(2 PM to 6:30 PM)</option>
+            <option value="m-e">Either Morning or Evening shift</option>
+            <option value="day">9.30 to 6 PM Day shift only</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Preferred Geographical Areas</label>
+          <div class="form-group">
+            <select class="states form-control custom-select" name="intern-states" id="intern-states"></select>
+          </div>
+          <div class="form-group">
+            <select class="cities form-control custom-select" name="intern-cities" id="intern-cities"></select>
+          </div>
+          <div class="form-group">
+            <select class="schools form-control custom-select" name="intern-schools" id="intern-schools"></select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Are you willing to consider honorary internship?</label>
+          <fieldset id = "honorary-intern">
+            <div class="form-check">
+              <input type="radio" name = "honorary" id="yes-honorary-intern" value="yes">
+              <label class="form-check-label" for="yes-honorary-intern">Yes</label>
+            </div>
+            <div class="form-check">
+              <input type="radio" name = "honorary" id="no-honorary-intern" value="no">
+              <label class="form-check-label" for="no-honorary-intern">No</label>
+            </div>
+          </fieldset>
+        </div>
+        <div class="form-group">
+          <label>Minimum expected remuneration</label>
+          <div class="row">
+            <div class="col-md-1 text-center" style="font-size:1.4em">
+               &#x20b9;
+            </div>
+            <div class="col-md-11">
+              <input type="number" name="remuneration" class="form-control">
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label> How much farther are you willing to travel?</label>
+          <select class="form-control custom-select" name="far-travel">
+            <option>Select one</option>
+            <option value="15">Only if the place is connected with public transport within 15 minutes</option>
+            <option value="5">Within 5 KM</option>
+            <option value="5-10">5 - 10 KM</option>
+            <option value="10-15">10 - 15 KM</option>
+          </select>
+        </div>
+        <input type="submit" value="Submit Form" class="submit_button btn btn-info btn-block" style="display:none; margin-bottom: 10px; cursor: pointer;">
+      </form>
+
+      <form id="teacher-form" style="display:none"  method="get" >
+        <div id="filter-teacher" class="filter-content">A paid teacher (you are looking for some form of regular employment, while trying to contribute in a meaningful way as well)</div>
+        <div class="form-group">
+          <label class="control-label" for="name">Enter full name:</label>
+          <input type="text" name="name" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="dob" class="control-label">Date of Birth</label>
+          <input id="dob-picker" type="text" name="dob" class="form-control dob calendar" disabled="false">
+        </div>
+        <div class="form-group">
+          <label class="control-label" for="sex">Sex</label>
+          <select class="form-control custom-select" name="sex">
+            <option>Select one</option>
+            <option value = "male">Male</option>
+            <option value = "female">Female</option>
+            <option value = "others">Others</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="mobile">Mobile Number</label>
+          <input type="number" class="form-control" name="mobile">
+        </div>
+        <div class="form-group">
+          <label for="whatsapp">WhatsApp Number (provide this only if you want us to contact you there)</label>
+          <input type="number" class="form-control" name="whatsapp">
+        </div>
+        <div class="form-group">
+          <label class="control-label" for="call-time">What is the best time to call you?</label>
+          <select class="form-control custom-select" name="call-time">
+            <option>Select one</option>
+            <option value = "morning">9 - 12 AM</option>
+            <option value = "noon">12 - 2 PM</option>
+            <option value = "afternoon">2 - 4 PM</option>
+            <option value = "evening">4 - 6 PM</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Educational Qualification</label>
+          <select class="form-control custom-select" name="educational-qualification">
+            <option>Select one</option>
+            <option value="8-10">8 to 10th class</option>
+            <option value="10-12">10 to 12th class</option>
+            <option value="university">University degree (open/regular)</option>
+            <option value="post-graduate">Post-graduate</option>
+            <option value="doctorate">Ph.D</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Work Experience</label>
+          <div class="form-group">
+            <label>Grades Taught</label>
+            <select class="form-control custom-select" name="grades-taught">
+              <option>Select one</option>
+              <option value="nursery">Nursery</option>
+              <option value="1-2">1 - 2 class</option>
+              <option value="3-4">3 - 4 class</option>
+              <option value="6-8">6 - 8 class</option>
+              <option value="9-12">9 - 12 class</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Subjects(Check all those that apply)</label>
+            <fieldset id="teacher-interest-subjects">
+              <div class="form-check">
+                <input type="checkbox" name = "teacher-interest-subjects" id="teacher-hindi" value="hindi">
+                <label class="form-check-label" for="teacher-hindi">Hindi</label>
+              </div>
+              <div class="form-check">
+                <input type="checkbox" name = "teacher-interest-subjects" id="teacher-english" value="english">
+                <label class="form-check-label" for="teacher-english">English</label>
+              </div>
+              <div class="form-check">
+                <input type="checkbox" name = "teacher-interest-subjects" id="teacher-maths" value="maths">
+                <label class="form-check-label" for="teacher-maths">Mathematics</label>
+              </div>
+              <div class="form-check">
+                <input type="checkbox" name = "teacher-interest-subjects" id="teacher-science" value="sports">
+                <label class="form-check-label" for="teacher-science">Science</label>
+              </div>
+              <div class="form-check">
+                <input type="checkbox" name = "teacher-interest-subjects" id="teacher-social" value="arts">
+                <label class="form-check-label" for="teacher-social">Social Science</label>
+              </div>
+              <div class="form-check">
+                <input type="checkbox" name = "teacher-interest-subjects" id="teacher-computers" value="arts">
+                <label class="form-check-label" for="teacher-computers">Computers</label>
+              </div>
+              <div class="form-check">
+                <input type="checkbox" name = "teacher-interest-subjects" id="teacher-sports" value="arts">
+                <label class="form-check-label" for="teacher-sports">Sports</label>
+              </div>
+              <div class="form-check">
+                <input type="checkbox" name = "teacher-interest-subjects" id="teacher-comm" value="arts">
+                <label class="form-check-label" for="teacher-comm">Communication and Journalism</label>
+              </div>
+
+            </fieldset>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Time Availability</label>
+          <select class="form-control custom-select" name="time-availability">
+            <option>Select one</option>
+            <option value="morning">Only Morning shift(8 to 1 PM)</option>
+            <option value="evening">Only Evening shift(2 PM to 6:30 PM)</option>
+            <option value="m-e">Either Morning or Evening shift</option>
+            <option value="day">9.30 to 6 PM Day shift only</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Preferred Geographical Areas</label>
+          <div class="form-group">
+            <select class="states form-control custom-select" name="teacher-states" id="teacher-states"></select>
+          </div>
+          <div class="form-group">
+            <select class="cities form-control custom-select" name="teacher-cities" id="teacher-cities"></select>
+          </div>
+          <div class="form-group">
+            <select class="schools form-control custom-select" name="teacher-schools" id="teacher-schools"></select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>When was the last you worked?</label>
+          <select class="form-control custom-select" name="last-worked">
+            <option>Select one</option>
+            <option value="less6">Less than 6 months ago</option>
+            <option value="1year">1 year ago</option>
+            <option value="2-3years">2 to 3 years ago</option>
+            <option value="3-5years">3 to 5 years ago</option>
+            <option value="more5">More than 5 years ago</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label> How much farther are you willing to travel?</label>
+          <select class="form-control custom-select" name="far-travel">
+            <option>Select one</option>
+            <option value="15">Only if the place is connected with public transport within 15 minutes</option>
+            <option value="5">Within 5 KM</option>
+            <option value="5-10">5 - 10 KM</option>
+            <option value="10-15">10 - 15 KM</option>
+          </select>
+        </div>
+        <input type="submit" value="Submit Form" class="submit_button btn btn-info btn-block" style="display:none; margin-bottom: 10px; cursor: pointer;">
+      </form>
+    </div>
+
+    <!-- start footer -->
+    <footer class="site-footer" role="contentinfo">
+      <hr/>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 mb-5" style="text-align:center">
+            <h3>Contact &amp; Address</h3>
+            <div class="row list-unstyled footer-link">
+              <div class="col-md-4">
+                <span class="mr-3">Registered Office:</span>
+              </div>
+              <div class="col-md-8">
+                <span class="text-white">A2-23C, Keshav Puram, Delhi-110035</span>
+              </div>
+            </div>
+            <div class="row list-unstyled footer-link">
+              <div class="col-md-4">
+                <span class="mr-3">Current:</span>
+              </div>
+              <div class="col-md-8">
+                <span class="text-white">B-370 Lok Vihar, Pitam Pura, Delhi-110034</span>
+              </div>
+            </div>
+            <div class="row list-unstyled footer-link">
+              <div class="col-md-4">
+                <span class="mr-3">Email:</span>
+              </div>
+              <div class="col-md-8">
+                <span class="text-white">greenworldedu2017@gmail.com</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <h3 style="text-align:center">Social Links</h3>
+            <ul class="list-unstyled footer-link d-flex footer-social" style="margin:auto; width:50%">
+              <li><a href="#" class="p-2"><span class="fa fa-facebook"></span></a></li>
+              <li><a href="#" class="p-2"><span class="fa fa-linkedin"></span></a></li>
+              <li><a href="#" class="p-2"><span class="fa fa-instagram"></span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- END footer -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.js"></script>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/bootstrap-datepicker.js"></script>
+    <script src="js/custom.js"></script>
+</body>
+</html>
